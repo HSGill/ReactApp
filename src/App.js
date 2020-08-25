@@ -19,7 +19,6 @@ class App extends Component {
     }
     onSearchCHange = (event) => {
         this.setState({ searchfield: event.target.value })
-
     }
     render() {
         const filteredRobots = this.state.robots.filter(robot => {
@@ -31,7 +30,6 @@ class App extends Component {
             <div className='tc'>
                 <h1 className='f1'>RoboFriends</h1>
                 <SearchBox searchChange={this.onSearchCHange} />
-                
                 <CardList robots={filteredRobots} />
                 </div>
         );
